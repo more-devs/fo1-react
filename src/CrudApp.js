@@ -7,7 +7,7 @@ function CrudApp() {
     const [name, setName] = useState('');
     const [editId, setEditId] = useState(null);
 
-    const API_URL = "mysql://root:QXcAwXRgqdismsiXhEqZCUTstQUINnUi@mysql.railway.internal:3306/railway";
+    const API_URL = process.env.REACT_APP_API_URL;
 
     const fetchItems = async () => {
         const res = await axios.get(API_URL);
